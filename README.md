@@ -4,7 +4,7 @@
 
 <h2 align="center">plug.db</h2>
 <p align="center">
-  A package that queries multiple types of databases with the same code
+  The Official PostgreSQL connector for plug.db
 </p> 
 
 # What is this? 
