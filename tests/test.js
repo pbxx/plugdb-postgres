@@ -1,10 +1,10 @@
 const assert = require("chai").assert
 var expect = require('chai').expect;
 
-const {PlugDB} = require('../plugDB.js')
+const {DBLink} = require('../connector.js')
 const fs = require('node:fs');
 
-var db = null
+var db = {}
 
 var testOptions = {
     deleteOnFinish: false,
@@ -18,15 +18,13 @@ describe("Database Connection", () => {
         var config = JSON.parse(fs.readFileSync("config/creds.json"))
         assert.typeOf( config, "object" )
 
-        db = new PlugDB(config, (err, resp) => {
-            //assert.isUndefined( err )
-            //assert.equal( (err == null), true )
+        db.actions = new DBLink(config, (err, resp) => {
             if (err) {
                 throw err
             }
             assert.equal( err, null )
             assert.equal( resp, "DBLink created" )
-        })
+        });
     })
     
 })
@@ -512,7 +510,7 @@ describe("Disconnect on finish", () => {
     it("disconnect from database server", () => {
         //test schema deletion
         try {
-            db = db.disconnect()
+            db = db.actions.disconnect()
         } catch (err) {
             throw err
         }
