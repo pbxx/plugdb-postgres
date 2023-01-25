@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://public.pbxdesign.xyz/plugdb/plugdb.png">
+  <img src="https://raw.githubusercontent.com/pbxx/plugdb-postgres/main/assets/logo-only.svg">
 </p>
 
-<h2 align="center">plug.db</h2>
+<h2 align="center">plugdb-postgres</h2>
 <p align="center">
-  A package that queries multiple types of databases with the same code
+  The Official PostgreSQL connector for plug.db
 </p> 
 
 # What is this? 
