@@ -1,0 +1,20 @@
+{
+  "name": "plugdb-postgres",
+  "version": "0.0.1",
+  "description": "Official PostgreSQL connector for plug.db",
+  "main": "connector.js",
+  "scripts": {
+    "test": "mocha --reporter mocha-appveyor-reporter",
+    "test-local": "mocha ./tests/test.js --slow 0"
+  },
+  "author": "PBX",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.8.0",
+    "simpletype-js": "^2.0.6"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
